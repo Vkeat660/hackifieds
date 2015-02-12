@@ -12,3 +12,11 @@ gulp serve
 ```
 
 $$$
+
+[AngularJS](https://angularjs.org/)
+
+[Firebase](https://www.firebase.com/docs/web/libraries/angular/)
+
+[Gulp](http://gulpjs.com/)
+
+[The Man](http://blacksportsonline.com/home/wp-content/uploads/2014/12/aaron-rodgers.jpg)
