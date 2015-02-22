@@ -3,9 +3,19 @@
 'use strict';
 
 angular.module('hackifieds')
-  .controller('MainCtrl', function ($scope, $firebase) {
+  .controller('MainCtrl', function ($scope, Post) {
     
-    var ref = new Firebase('https://hackifieds.firebaseio.com/');
-    var sync = $firebase(ref);
+    $scope.posts = Post.all;
+    $scope.post = {title: '', description: '', email: ''};
+
+    $scope.submitPost = function () {
+        Post.create($scope.post).then(function () {
+                  $scope.post = {title: '', description: '', email: ''};
+        });
+    };
+
+    $scope.deletePost = function (post) {
+        Post.delete(post);
+    };
     
-  });
+});
